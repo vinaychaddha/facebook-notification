@@ -8,80 +8,17 @@
     <meta http-equiv="Expires" content="0" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="cache-control" content="no-cache" />
-    <link href="../css/fonts.css" rel="stylesheet" type="text/css">
-    <link href="../css/screen.css" rel="stylesheet" type="text/css">
-    <link href="../screens/inputScreen/screen.css" rel="stylesheet" type="text/css">
-    <link href="../screens/statementScreen/screen.css" rel="stylesheet" type="text/css">
+    <link href="../css/index.css" rel="stylesheet" type="text/css">
 </head>
 
 
 <body>
     <div class="mainContainer">
-    </div>
-
-    <script id="inputScreenTemplate" type="text/x-jsrender">
         <div class="header">
             <img src="../images/logo.png" class="image">
             <div class="text">POSTS</div>
         </div>
-        </div>
-    </script>
-
-    <script id="statementTemplate" type="text/x-jsrender">
-        <div class="statementScreen">
-            <div class="screenHeader">
-                <img src="../images/back.png" class="image">
-                <div class="text">Logs</div>
-            </div>
-            <div class="statementContainer">
-                {{for data}}
-                <div class="statement">
-                    <div class="imagePanel">
-                        <img src="../images/icon-statementMenu.png" class="statementIcon">
-                    </div>
-                    <div class="infoPanel">
-                        <div class="text">
-                            <span class="item {{:~lowerCase(TransactionType)}}">{{:TransactionType}}</span>
-                        </div>
-                        <div class="movieName">
-                            {{:~moment(DateAtClient, "DD MMM \'YY h:mm a")}}
-                        </div>
-                        <div class="value">
-                            {{if OriginalAmount != 0}}
-                            <span class="currency">Rs.</span><span class="amount">{{:~toFixed(OriginalAmount)}}</span> {{/if}}
-                        </div>
-                    </div>
-                    <div class="datePanel">
-                        <div class="date">
-
-                        </div>
-                        <div class="semi-circle top">
-                        </div>
-                        <div class="semi-circle bottom">
-                        </div>
-                    </div>
-                </div>
-                {{/for}}
-            </div>
-        </div>
-    </script>
-
-    <script src="../scripts/jquery.js"></script>
-    <script src="../scripts/transit.js"></script>
-    <script src="../scripts/highcharts.js"></script>
-    <script src="../scripts/jsrender.js"></script>
-    <script src="../scripts/jsview.js"></script>
-    <script src="../scripts/jquery.cookie.js"></script>
-    <script src="../scripts/moment.min.js"></script>
-    <script src="../scripts/superjson.js"></script>
-    <script src="../scripts/tocca.min.js"></script>
-    <script src="../js/base.js"></script>
-    <script src="../js/appConfig.js"></script>
-    <script src="../js/index.js"></script>
-    <script src="../screens/inputScreen/screen.js"></script>
-    <script src="../screens/statementScreen/screen.js"></script>
-
-
+    </div>
 </body>
 
 </html>
