@@ -24,7 +24,7 @@ app.use(function (req, res, next) {
 });
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + "/public/views/index.html")
+    res.send("Hello You Are at a Wrong Place :-)");
 })
 
 app.post('/facebook-notification', (req, res) => {
@@ -32,8 +32,8 @@ app.post('/facebook-notification', (req, res) => {
    var x = r.entry[0].changes[0];
    console.log('************************');
    console.log('NEW POST FROM SENDER ID ' + x.value.sender_id);
-   console.log('POST IS :');
-   console.log(x.value.message);
+   console.log('POST IS :- ' + x.value.message);
+   console.log('************************');
     res.json({
         status: true
     });
