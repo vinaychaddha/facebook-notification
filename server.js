@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + "/public/views/index.html")
 })
 
-app.post('/facebook-notification', () => {
+app.post('/facebook-notification', (req, res) => {
     console.log(req.body);
     res.json({
         status: true
