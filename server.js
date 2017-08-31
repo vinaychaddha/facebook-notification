@@ -23,7 +23,13 @@ app.use(function (req, res, next) {
     next();
 });
 
+app.get('/', () => {
+    res.sendFile(__dirname + "/public/views/index.html")
+})
+
 app.post('/facebook-notification', () => {
     console.log(req.body);
-    res.json({status : true});
+    res.json({
+        status: true
+    });
 })

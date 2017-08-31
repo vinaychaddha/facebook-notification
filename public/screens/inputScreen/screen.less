@@ -1,0 +1,149 @@
+@import '../../css/base';
+.mainContainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('../../images/bgScreen.jpg');
+    .header {
+        position: absolute;
+        width: 100%;
+        height: 10rem;
+        text-align: center;
+        line-height: 10rem;
+        font-size: 3.5rem;
+        font-weight: 600;
+        color: @yellow;
+        .image {
+            position: relative;
+            height: 5rem;
+            margin-top: 2rem;
+            margin-left: 8%;
+            float: left;
+        }
+        .text {
+            position: relative;
+            width: 20rem;
+            height: 8rem;
+            line-height: 7.5rem;
+            font-size: 3.5rem;
+            margin-top: 1rem;
+            font-weight: 600;
+            color: #ffcb05;
+            float: left;
+            text-align: left;
+            margin-left: 1rem;
+        }
+    }
+    .inputScreen {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 6rem;
+        .screenHeader {
+            position: relative;
+            width: 84%;
+            height: 5rem;
+            line-height: 5rem;
+            font-size: 3rem;
+            color: @yellow;
+            font-weight: 500;
+            margin-left: 8%;
+            margin-top: 10rem;
+            font-weight: 900;
+        }
+        .input {
+            position: relative;
+            width: 84%;
+            height: 5rem;
+            font-size: 2rem;
+            line-height: 5rem;
+            box-sizing: border-box;
+            padding-left: 1rem;
+            outline: none;
+            border: none;
+            border-bottom: 1px dotted white;
+            background: none;
+            margin-left: 8%;
+            margin-top: 1rem;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+        .btn {
+            position: relative;
+            width: 38%;
+            height: 4rem;
+            line-height: 4rem;
+            text-align: center;
+            margin-right: 8%;
+            background: @yellow;
+            float: right;
+            margin-top: 5rem;
+        }
+        .loadingArea {
+            position: relative;
+            width: 100%;
+            height: auto;
+            display: none;
+            .loader {
+                position: relative;
+                border: 10px solid rgba(0, 0, 0, 0.8);
+                border-radius: 50%;
+                border-top: 10px solid @yellow;
+                width: 4rem;
+                height: 4rem;
+                animation: spin 2s linear infinite;
+                -webkit-animation: spin 2s linear infinite;
+                left: 50%;
+                margin-top: 15.5rem;
+                margin-left: -3.5rem;
+            }
+            @keyframes spin {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+            .loaderText {
+                position: relative;
+                width: 100%;
+                height: 5rem;
+                text-align: center;
+                line-height: 5rem;
+                font-size: 2rem;
+                margin-top: 2rem;
+                color: @yellow;
+            }
+        }
+        .textArea {
+            position: relative;
+            width: 84%;
+            height: 8rem;
+            margin-left: 8%;
+            float: left;
+            line-height: 8rem;
+            margin-top: 5rem;
+            color: @yellow;
+            display: none;
+            .currency {
+                position: relative;
+                width: 50%;
+                height: 100%;
+                float: left;
+                font-size: 2.1rem;
+                font-weight: 500;
+                line-height: 8.8rem;
+            }
+            .balence {
+                position: relative;
+                width: 50%;
+                height: 100%;
+                float: left;
+                text-align: right;
+                font-size: 3rem;
+                font-weight: 600;
+            }
+        }
+    }
+}

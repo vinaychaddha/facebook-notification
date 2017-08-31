@@ -1,0 +1,98 @@
+// out: base.css, sourcemap: false, compress: true
+@white: #ffffff;
+@gold: #e1a336;
+@black: #000000;
+@yellow: #ffcb05;
+@lightGray: #f9f7eb;
+@h1: 3rem;
+@h2: 1.4rem;
+@h3: 2.6rem;
+@h4: 2rem;
+@h5: 1.8rem;
+@font: Affogato;
+@w: 7;
+@iCols: 5;
+@iRows: 6;
+@categoryCols: 2;
+@catRows: 5;
+@g: 0.5;
+@black1: #000000;
+@black2: lighten(@black1, 20%);
+@white: #ffffff;
+@red: #d61c22;
+@yellow: #ffcb05;
+@gold: #ac9456;
+@green: #099e44;
+@border1: 1px dotted @black1;
+@baseWidth: 7;
+@cardWidth: 100%;
+@cardMargin: 0%;
+.cardClear() {
+    // &:nth-child(1) {
+    //     clear: both;
+    // }
+}
+
+.h(@h) {
+    height: unit(@h, rem);
+    line-height: unit(@h, rem);
+}
+
+.rl() {
+    position: relative;
+    float: left;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+input::-webkit-input-placeholder {
+    font-family: @font;
+    font-weight: 100;
+    font-size: 1.6rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+input[type="text"] {
+    font-family: @font;
+}
+
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+}
+
+input.break {
+    word-wrap: break-word;
+    word-break: break-all;
+    height: 5rem;
+}
+
+input,
+textarea {
+    color: @white;
+    font-family: @font;
+}
+
+body {
+    margin: 0;
+    font-size: 1.6rem;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background: black;
+    font-family: "Affogato";
+}
+
+.slideLeft {
+    left: 0 !important;
+}

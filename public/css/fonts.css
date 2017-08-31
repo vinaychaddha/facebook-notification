@@ -1,0 +1,6 @@
+@font-face {
+        font-family: "Affogato";
+        font-style:normal;
+        font-weight:400;;
+        src: local("Affogato"), url("../fonts/Affogato-Regular.ttf") format("truetype");
+}

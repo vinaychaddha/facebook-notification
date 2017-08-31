@@ -1,0 +1,207 @@
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+input::-webkit-input-placeholder {
+  font-family: Affogato;
+  font-weight: 100;
+  font-size: 1.6rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+input[type="text"] {
+  font-family: Affogato;
+}
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+input.break {
+  word-wrap: break-word;
+  word-break: break-all;
+  height: 5rem;
+}
+input,
+textarea {
+  color: #ffffff;
+  font-family: Affogato;
+}
+body {
+  margin: 0;
+  font-size: 1.6rem;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: black;
+  font-family: "Affogato";
+}
+.slideLeft {
+  left: 0 !important;
+}
+.statementScreen {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-transform: capitalize;
+  color: black;
+}
+.statementScreen .screenHeader {
+  position: absolute;
+  top: 0;
+  height: 10rem;
+  width: 100%;
+}
+.statementScreen .screenHeader .image {
+  position: absolute;
+  height: 4rem;
+  top: 3rem;
+  left: 3rem;
+}
+.statementScreen .screenHeader .text {
+  position: absolute;
+  width: 20rem;
+  left: 10rem;
+  height: 8rem;
+  line-height: 8rem;
+  font-size: 3.5rem;
+  top: 1rem;
+  font-weight: 600;
+  color: #ffcb05;
+}
+.statementScreen .statementContainer {
+  position: absolute;
+  top: 10rem;
+  left: 3rem;
+  right: 3rem;
+  bottom: 2rem;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.statementScreen .statementContainer .statement {
+  position: relative;
+  float: left;
+  height: 14rem;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 3rem;
+  background: #faf6ed;
+  overflow: hidden;
+}
+.statementScreen .statementContainer .statement .imagePanel {
+  position: absolute;
+  height: 10rem;
+  width: 10.5rem;
+  top: 2.1rem;
+  left: 2.1rem;
+  background: #eaeaea;
+  border-radius: 1rem;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+.statementScreen .statementContainer .statement .imagePanel .statementIcon {
+  position: absolute;
+  height: 10rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.statementScreen .statementContainer .statement .infoPanel {
+  position: absolute;
+  left: 14rem;
+  right: 4.5rem;
+  height: 100%;
+  box-sizing: border-box;
+}
+.statementScreen .statementContainer .statement .infoPanel .text {
+  position: absolute;
+  top: 1rem;
+  height: 5rem;
+  line-height: 4rem;
+  width: 100%;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.statementScreen .statementContainer .statement .infoPanel .text .number {
+  font-size: 4rem;
+  font-weight: 500;
+}
+.statementScreen .statementContainer .statement .infoPanel .text .item {
+  font-size: 2.4rem;
+}
+.statementScreen .statementContainer .statement .infoPanel .text .item.redeem {
+  color: #d61c22;
+  font-weight: 900;
+}
+.statementScreen .statementContainer .statement .infoPanel .text .item.reload {
+  color: #099e44;
+  font-weight: 900;
+}
+.statementScreen .statementContainer .statement .infoPanel .movieName {
+  position: absolute;
+  top: 5rem;
+  bottom: 5rem;
+  overflow: hidden;
+  line-height: 2rem;
+  height: 2rem;
+  width: 100%;
+  font-size: 1.6rem;
+}
+.statementScreen .statementContainer .statement .infoPanel .value {
+  position: absolute;
+  bottom: 1rem;
+  height: 5rem;
+  line-height: 4.5rem;
+  width: 100%;
+  font-weight: 300;
+}
+.statementScreen .statementContainer .statement .infoPanel .value .currency {
+  font-size: 2rem;
+}
+.statementScreen .statementContainer .statement .infoPanel .value .amount {
+  font-size: 3.2rem;
+  font-weight: 900;
+  padding-left: 0.3rem;
+}
+.statementScreen .statementContainer .statement .datePanel {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 4.5rem;
+  border-left: 1px dotted #aaaaaa;
+  box-sizing: border-box;
+  background: #e4ce9d;
+}
+.statementScreen .statementContainer .statement .datePanel .date {
+  position: absolute;
+  left: -4.3rem;
+  top: 4.3rem;
+  height: 5rem;
+  width: 14rem;
+  font-size: 1.5rem;
+  -webkit-transform: rotate(-90deg);
+  font-weight: 500;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+}
+.statementScreen .statementContainer .statement .datePanel .semi-circle {
+  position: absolute;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  background: black;
+  right: -2rem;
+}
+.statementScreen .statementContainer .statement .datePanel .semi-circle.top {
+  top: -2rem;
+}
+.statementScreen .statementContainer .statement .datePanel .semi-circle.bottom {
+  bottom: -2rem;
+}
+.statementScreen ::-webkit-scrollbar {
+  width: 0px;
+}
