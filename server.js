@@ -35,8 +35,7 @@ app.post('/facebook-notification', (req, res) => {
 })
 
 app.get('/facebook-notification', (req, res)=>{
-    console.log(req);
+    console.log(req.query.hub.challenge);
     console.log('**************************');
-    console.log(req.body);
-    res.send('facebook-notification-of-posts');
+    res.send(req.query.hub.challenge);
 })
