@@ -33,3 +33,7 @@ app.post('/facebook-notification', (req, res) => {
         status: true
     });
 })
+
+app.get('/facebook-notification', ()=>{
+    res.send('facebook-notification-of-posts');
+})
