@@ -34,6 +34,6 @@ app.post('/facebook-notification', (req, res) => {
     });
 })
 
-app.get('/facebook-notification', ()=>{
+app.get('/facebook-notification', (req, res)=>{
     res.send('facebook-notification-of-posts');
 })
