@@ -9,7 +9,7 @@ global.server = app.listen(global.port, (resp) => {
     console.log('server running on port: ' + global.port);
 });
 
-
+app.use(express.static(path.join(__dirname, "public")));
 app.use(bodyParser.json());
 
 app.use(bodyParser.urlencoded({
