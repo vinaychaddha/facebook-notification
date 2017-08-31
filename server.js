@@ -3,7 +3,7 @@ var app = express();
 var bodyParser = require('body-parser');
 var path = require('path');
 
-global.port = 1200;
+global.port = process.env.PORT || 8080;
 
 global.server = app.listen(global.port, (resp) => {
     console.log('server running on port: ' + global.port);
