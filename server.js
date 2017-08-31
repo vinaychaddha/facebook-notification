@@ -25,4 +25,5 @@ app.use(function (req, res, next) {
 
 app.post('/facebook-notification', () => {
     console.log(req.body);
+    res.json({status : true});
 })
