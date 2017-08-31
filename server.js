@@ -23,7 +23,7 @@ app.use(function (req, res, next) {
     next();
 });
 
-app.get('/', () => {
+app.get('/', (req, res) => {
     res.sendFile(__dirname + "/public/views/index.html")
 })
 
