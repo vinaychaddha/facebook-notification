@@ -29,11 +29,11 @@ app.get('/', (req, res) => {
 
 app.post('/facebook-notification', (req, res) => {
    var r = req.body;
-   var x = r.entry[0].changes[0];
     console.log('*****************************');
     console.log('BODY IS :');
     console.log(r);
    console.log('************************');
+    var x = r.entry[0].changes[0];
    console.log('NEW POST FROM SENDER ID ' + x.value.sender_id);
    console.log('POST IS :- ' + x.value.message);
    console.log('************************');
