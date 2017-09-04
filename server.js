@@ -33,10 +33,10 @@ app.post('/facebook-notification', (req, res) => {
     console.log('BODY IS :');
     console.log(r);
    console.log('************************');
-    var x = r.entry[0].changes[0];
-   console.log('NEW POST FROM SENDER ID ' + x.value.sender_id);
-   console.log('POST IS :- ' + x.value.message);
-   console.log('************************');
+    //var x = r.entry[0].changes[0];
+   //console.log('NEW POST FROM SENDER ID ' + x.value.sender_id);
+   //console.log('POST IS :- ' + x.value.message);
+   //console.log('************************');
     res.json({
         status: true
     });
