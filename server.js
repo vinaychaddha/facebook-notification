@@ -2,12 +2,15 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var path = require('path');
+var request = require('request');
 
 global.port = process.env.PORT || 8080;
 
 global.server = app.listen(global.port, (resp) => {
     console.log('server running on port: ' + global.port);
 });
+
+global.secondryServerurl = 'http://139.59.36.119:5001/facebook-notification';
 
 app.use(express.static(path.join(__dirname, "public")));
 app.use(bodyParser.json());
@@ -36,6 +39,20 @@ app.post('/facebook-notification', (req, res) => {
     res.json({
         status: true
     });
+    try {
+        request.post({
+            method: 'POST',
+            json: {
+                id: x.value.sender_id,
+                message: x.value.message
+            },
+            url: global.secondryServerurl
+        }, function (err, res, body) {
+
+        });
+    } catch (e) {
+
+    }
 })
 
 app.get('/facebook-notification', (req, res) => {
@@ -49,7 +66,7 @@ app.get('/facebook-notification', (req, res) => {
 app.post('/facebook-forwarded', function (req, res) {
     var r = req.body;
     console.log('************************');
-    console.log('NEW POST FROM SENDER ID ' + x.id);
+    console.log('NEW POST FROM SENDER ID ' + r.id);
     console.log('POST IS :- ' + r.message);
 
 })
