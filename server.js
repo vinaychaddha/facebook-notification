@@ -28,23 +28,28 @@ app.get('/', (req, res) => {
 })
 
 app.post('/facebook-notification', (req, res) => {
-   var r = req.body;
-    console.log('*****************************');
-    console.log('BODY IS :');
-    console.log(r);
-   console.log('************************');
-    //var x = r.entry[0].changes[0];
-   //console.log('NEW POST FROM SENDER ID ' + x.value.sender_id);
-   //console.log('POST IS :- ' + x.value.message);
-   //console.log('************************');
+    var r = req.body;
+    var x = r.entry[0].changes[0];
+    console.log('************************');
+    console.log('NEW POST FROM SENDER ID ' + x.value.sender_id);
+    console.log('POST IS :- ' + x.value.message);
     res.json({
         status: true
     });
 })
 
-app.get('/facebook-notification', (req, res)=>{
+app.get('/facebook-notification', (req, res) => {
     console.log(req.query);
     console.log(req.query['hub.challenge']);
     console.log('**************************');
     res.send(req.query['hub.challenge']);
+});
+
+
+app.post('/facebook-forwarded', function (req, res) {
+    var r = req.body;
+    console.log('************************');
+    console.log('NEW POST FROM SENDER ID ' + x.id);
+    console.log('POST IS :- ' + r.message);
+
 })
