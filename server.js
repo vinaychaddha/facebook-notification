@@ -10,7 +10,7 @@ global.server = app.listen(global.port, (resp) => {
     console.log('server running on port: ' + global.port);
 });
 
-global.secondryServerurl = 'http://139.59.36.119:5001/facebook-notification';
+global.secondryServerurl = 'http://139.59.36.119:5001/facebook-forwarded';
 
 app.use(express.static(path.join(__dirname, "public")));
 app.use(bodyParser.json());
