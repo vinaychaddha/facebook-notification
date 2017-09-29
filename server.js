@@ -4,6 +4,25 @@ var bodyParser = require('body-parser');
 var path = require('path');
 var request = require('request');
 
+var mqtt    = require('mqtt');
+
+var client  = mqtt.connect('mqtt://m12.cloudmqtt.com:16479', {
+	username: 'sxdzesyk',
+	password: 'dc_pY7Q7gOTw'
+	} );
+
+client.on('connect', function () {
+  console.log('connected to cloudmqtt');
+  client.subscribe('vending_out');
+  client.publish('vending_out', 'Hello Vending Demo');
+});
+
+clientmqtt.on('message', function (topic, message) {
+  // message is Buffer 
+  console.log(message.toString());
+});
+
+
 global.port = process.env.PORT || 8080;
 
 global.server = app.listen(global.port, (resp) => {
@@ -33,6 +52,7 @@ app.get('/', (req, res) => {
 app.post('/facebook-notification', (req, res) => {
     var r = req.body;
     var x = r.entry[0].changes[0];
+    clientmqtt.publish('vending_in', "*VEND#");
     console.log('************************');
     console.log('NEW POST FROM SENDER ID ' + x.value.sender_id);
     console.log('POST IS :- ' + x.value.message);
@@ -70,3 +90,5 @@ app.post('/facebook-forwarded', function (req, res) {
     console.log('POST IS :- ' + r.message);
 
 })
+
+
