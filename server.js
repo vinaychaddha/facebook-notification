@@ -17,10 +17,7 @@ client.on('connect', function () {
   client.publish('vending_out', 'Hello Vending Demo');
 });
 
-clientmqtt.on('message', function (topic, message) {
-  // message is Buffer 
-  console.log(message.toString());
-});
+ 
 
 
 global.port = process.env.PORT || 8080;
