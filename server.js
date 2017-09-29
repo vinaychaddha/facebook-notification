@@ -14,11 +14,8 @@ var client  = mqtt.connect('mqtt://m12.cloudmqtt.com:16479', {
 client.on('connect', function () {
   console.log('connected to cloudmqtt');
   client.subscribe('vending_out');
-  client.publish('vending_out', 'Hello Vending Demo');
+  //client.publish('vending_out', 'Hello Vending Demo');
 });
-
- 
-
 
 global.port = process.env.PORT || 8080;
 
@@ -49,27 +46,27 @@ app.get('/', (req, res) => {
 app.post('/facebook-notification', (req, res) => {
     var r = req.body;
     var x = r.entry[0].changes[0];
-    clientmqtt.publish('vending_in', "*VEND#");
+    client.publish('vending_in', "*VEND#");
     console.log('************************');
     console.log('NEW POST FROM SENDER ID ' + x.value.sender_id);
     console.log('POST IS :- ' + x.value.message);
     res.json({
         status: true
     });
-    try {
-        request.post({
-            method: 'POST',
-            json: {
-                id: x.value.sender_id,
-                message: x.value.message
-            },
-            url: global.secondryServerurl
-        }, function (err, res, body) {
+//     try {
+//         request.post({
+//             method: 'POST',
+//             json: {
+//                 id: x.value.sender_id,
+//                 message: x.value.message
+//             },
+//             url: global.secondryServerurl
+//         }, function (err, res, body) {
 
-        });
-    } catch (e) {
+//         });
+//     } catch (e) {
 
-    }
+//     }
 })
 
 app.get('/facebook-notification', (req, res) => {
